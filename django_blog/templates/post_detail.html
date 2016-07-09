@@ -1,25 +1,15 @@
-<!--doctype html-->
-<html>
-<head>
-  <title>{{ title }}</title>
-</head>
+{% extends "base.html" %}
 
-<body>
-  {% if messages %}
-    <ul class="messages">
-        {% for message in messages %}
-          <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-        {% endfor %}
-    </ul>
-  {% endif %}
+{% block head_title %}{{ instance.title }} | {{ block.super }} {% endblock head_title %}
 
-  <h1>Template is working</h1>
 
-  {{ instance.title }}<br />
-  {{ instance.content }}<br />
-  {{ instance.timestamp }}<br />
-  {{ instance.updated }}<br />
-  {{ instance.id }}<br />
+{% block content %}
+<h1>Template is working</h1>
 
-</body>
-</html>
+{{ instance.title }}<br />
+{{ instance.content }}<br />
+{{ instance.timestamp }}<br />
+{{ instance.updated }}<br />
+{{ instance.id }}<br />
+
+{% endblock content %}

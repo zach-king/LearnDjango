@@ -1,10 +1,6 @@
-<!--doctype html-->
-<html>
-<head>
-  <title>{{ title }}</title>
-</head>
+{% extends "base.html" %}
 
-<body>
+{% block content %}
   <h1>Template is working</h1>
 
   {% for obj in object_list %}
@@ -16,5 +12,4 @@
     <hr />
   {% endfor %}
 
-</body>
-</html>
+{% endblock content %}
