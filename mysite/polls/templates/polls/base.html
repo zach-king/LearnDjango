@@ -1,0 +1,27 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<head lang="en">
+  <title>{{ title|default:"Django App" }}</title>
+  <meta charset="utf-8">
+  {% include "polls/bootstrap.html" %}
+  <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+</head>
+
+<body>
+  {% include "polls/navigation.html" %}
+
+  <div class="container">
+    <div id="content">
+      <div class="starter-template">
+
+        {% block content %}
+
+        {% endblock content %}
+
+        {% include "polls/bootstrap-scripts.html" %}
+      </div> <!-- starter-template -->
+    </div> <!-- content -->
+  </div> <!-- container -->
+</body>
+
+</html>
