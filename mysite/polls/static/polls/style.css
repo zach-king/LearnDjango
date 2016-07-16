@@ -9,3 +9,11 @@ body {
 .btn a:hover {
   text-decoration: none;
 }
+
+.poll-link {
+  font-size: 20px;
+}
+
+.poll-pub-date {
+  
+}
